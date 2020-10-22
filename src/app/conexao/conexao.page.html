@@ -1,0 +1,53 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titles">Conexão</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Definir IP da Máquina: </ion-label>
+            <ion-input name="ipMaquina" type="url" [(ngModel)]="ipMaquina"></ion-input>
+        </ion-item>
+        <ion-button expand="full" class="button-green" (click)="TrocaIP(ipMaquina)">Confirmar</ion-button>
+        <h6>IP Configurado:</h6>
+        <ion-item>
+            <ion-icon name="wifi"></ion-icon>
+            <ion-input slot="end" disabled type="url" > 
+                {{IP}}
+            </ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-title class="ion-padding">Conexão: </ion-title>
+            <ion-label [hidden]="!conect">Conectado</ion-label>
+            <ion-label [hidden]="conect">Desconectado</ion-label>
+            <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+            <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-button expand="full" class="button-green" (click)="Conectar('#')">Conectar</ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button expand="full" class="button-green" (click)="Conectar('¨')">Desconectar</ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+
+   
+
+</ion-content>
+
+<ion-footer class="footerall">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

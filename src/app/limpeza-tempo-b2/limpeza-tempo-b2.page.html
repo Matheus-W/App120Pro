@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Configuração - Bomba 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-list>
+          <ion-item>
+              <ion-img class="imagemb" src="/assets/RESERVATÓRIO DOSADOR Nº 2 (01).JPG"></ion-img>
+              <ion-list>
+                  <ion-item>
+                      <ion-label>Tempo de Limpeza: </ion-label>
+                      <ion-input class="result" type="number" min="5" max="15" maxlength="2">{{Tempob2}}</ion-input>
+                  </ion-item>
+                  <ion-button class="button-green" expand="full" (click)="Conta('+')">Aumentar</ion-button>
+                  <ion-button class="button-green" expand="full" (click)="Conta('-')">Diminuir</ion-button>
+              </ion-list>
+          </ion-item>
+      </ion-list>
+      <ion-button class="button-green" expand="full" (click)="closeModal()">Confirmar</ion-button>
+  
+  </ion-content>
+  
+  <ion-footer class="footerall">
+      © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+  </ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "AppTratadora",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

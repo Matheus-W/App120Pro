@@ -1,0 +1,27 @@
+<ion-header mode="ios">
+  <ion-toolbar class="header-home" mode="ios" style="font-size: 15px;" color="customColor">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-home">
+      Grazmec
+    </ion-title>
+    <ion-buttons slot="end" class="ion-padding">
+        <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+        <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <h1>Nome da máquina</h1>
+    <ion-img src="/assets/Maquina.JPG"></ion-img>
+
+    <p>
+        descrição...
+    </p>
+</ion-content>
+
+<ion-footer class="footer-home">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

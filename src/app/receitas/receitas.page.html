@@ -1,0 +1,31 @@
+<ion-header mode="ios">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="title-receitas">Receitas</ion-title>
+        <ion-buttons slot="end" class="ion-padding">
+            <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+            <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-button expand="full" (click)="abrirPagina('receita1')">Receita 1</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita2')">Receita 2</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita3')">Receita 3</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita4')">Receita 4</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita5')">Receita 5</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita6')">Receita 6</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita7')">Receita 7</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita8')">Receita 8</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita9')">Receita 9</ion-button>
+    <ion-button expand="full" (click)="abrirPagina('receita10')">Receita 10</ion-button>
+
+</ion-content>
+
+<ion-footer class="footer-home">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

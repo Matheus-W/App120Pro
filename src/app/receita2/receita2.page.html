@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title class="title-receita1">Receita - 2</ion-title>
+    </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>Nome da Receita:  </ion-label>
+            <ion-input name="NomeDaReceita" type="text" placeholder="Digite" maxlength="12" [(ngModel)]="NomeDaReceita"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>kg/min (Vazão Nominal):  </ion-label>
+            <ion-input  name="VazaoNominal" type="text" maxlength="5" placeholder="   xxxx.x" [(ngModel)]="VazaoNominal"></ion-input>
+            <ion-button class="button-green"  type="submit" (click)="PegaVazao(VazaoNominal, NomeDaReceita)">
+                <ion-icon name="arrow-forward"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-item class="conteudo">
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 1 (01).JPG"></ion-img>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Produto: </ion-label>
+                    <ion-input name="Produto1" type="text" placeholder="Digite" maxlength="12" [(ngModel)]="Produto1"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>mL/Kg:</ion-label>
+                    <ion-input name="Valor1" type="text" maxlength="5" placeholder="   xxxx.x" [(ngModel)]="Valor1"></ion-input>  
+                </ion-item>
+                <ion-button class="button-green" type="submit" expand="full" (click)="PegaProduto(1,Produto1,Valor1)">
+                    <ion-icon name="arrow-forward" ></ion-icon>
+                </ion-button>
+            </ion-list>
+        </ion-item>
+        <ion-item class="conteudo">
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 2 (01).JPG"></ion-img>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Produto: </ion-label>
+                    <ion-input name="Produto2" type="text" placeholder="Digite" maxlength="12" [(ngModel)]="Produto2"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>mL/Kg:</ion-label>
+                    <ion-input name="Valor2" type="text" maxlength="5" placeholder="   xxxx.x" [(ngModel)]="Valor2"></ion-input>
+                    
+                </ion-item>
+                <ion-button class="button-green" type="submit" expand="full" (click)="PegaProduto(2,Produto2,Valor2)">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </ion-button>
+            </ion-list>
+        </ion-item>
+        <ion-item class="conteudo">
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 3 (01).JPG"></ion-img>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Produto: </ion-label>
+                    <ion-input name="Produto3" type="text" placeholder="Digite" maxlength="12" [(ngModel)]="Produto3"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>mL/Kg:</ion-label>
+                    <ion-input name="Valor3" type="text" maxlength="5" placeholder="   xxxx.x" [(ngModel)]="Valor3"></ion-input>
+                    
+                </ion-item>
+                <ion-button class="button-green" type="submit" expand="full" (click)="PegaProduto(3,Produto3,Valor3)">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </ion-button>
+            </ion-list>
+        </ion-item>
+        <ion-item class="conteudo">
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 4 (01).JPG"></ion-img>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Produto: </ion-label>
+                    <ion-input name="Produto4" type="text" placeholder="Digite" maxlength="12" [(ngModel)]="Produto4"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>mL/Kg:</ion-label>
+                    <ion-input name="Valor4" type="text" maxlength="5" placeholder="   xxxx.x" [(ngModel)]="Valor4"></ion-input>
+                    
+                </ion-item>
+                <ion-button class="button-green" type="submit" expand="full" (click)="PegaProduto(4,Produto4,Valor4)">
+                    <ion-icon name="arrow-forward"></ion-icon>
+                </ion-button>
+            </ion-list>
+        </ion-item>
+        
+            <ion-button class="button-green" type="submit" expand="full" (click)="SalvarEnviar()">
+                Salvar Receita
+            </ion-button>
+        
+    </ion-list>
+
+</ion-content>
+
+<ion-footer class="footerall">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titles">Gestão</ion-title>
+    <ion-buttons slot="end" class="ion-padding">
+        <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+        <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid responsive-sm class="grade borda">
+    <ion-row class="borda" size="2" class="ion-align-items-center">Alertas do Sistema</ion-row>
+    <ion-row class="borda">
+      <ion-col class="borda">Data/Hora</ion-col>
+      <ion-col class="borda">Alerta</ion-col>
+    </ion-row>
+    <ion-row class="borda">
+      <ion-col class="borda"> - </ion-col>
+      <ion-col class="borda"> - </ion-col>
+    </ion-row>
+    <ion-row class="borda">
+      <ion-col class="borda"> - </ion-col>
+      <ion-col class="borda"> - </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="footerall">
+  © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

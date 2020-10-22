@@ -1,0 +1,174 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-operacao">Operação</ion-title>
+    <ion-buttons slot="end" class="ion-padding">
+        <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+        <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <h1 class="titulo-receita">{{NomeReceita}}</h1>
+    </div>
+    <div class="conteudototal">
+        <div class="conteudo">
+            <div class="organizar">
+                <div class="Enter-numero Enter-numero1">
+                    <div class="ajustedenumero">
+                        {{Legenda1}}
+                    </div>
+                </div>
+                <div class="Enter-numero">
+                    <div class="ajustedenumero">
+                        {{Legenda2}}
+                    </div>
+                </div>
+            </div>
+            <div class="blocosdeconteudo">
+                <ion-img class="imagem imagem13" src="/assets/RESERVATÓRIO DOSADOR Nº 1 (01).JPG"></ion-img>
+                <ion-img class="imagem imagem24" src="/assets/RESERVATÓRIO DOSADOR Nº 2 (01).JPG"></ion-img>
+            </div>
+            
+        
+            <div class="organizar">
+                <!-- <ion-input readonly="true" type="number" class="Enter-numero  Enter-numero1">{{Bomba1}}</ion-input> -->
+                <!-- <ion-input readonly="true" type="number" class="Enter-numero">{{Bomba2}}</ion-input> -->
+                <div class="Enter-numero Enter-numero1">
+                    <div class="ajustedenumero">
+                        {{Bomba1}} Ml/Kg
+                    </div>
+                </div>
+                <div class="Enter-numero">
+                    <div class="ajustedenumero">
+                        {{Bomba2}} Ml/Kg
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conteudo">
+            <div class="organizar">
+                <div class="Enter-numero Enter-numero1">
+                    <div class="ajustedenumero">
+                        {{Legenda3}}
+                    </div>
+                </div>
+                <div class="Enter-numero">
+                    <div class="ajustedenumero">
+                        {{Legenda4}}
+                    </div>
+                </div>
+            </div>
+            <div class="blocosdeconteudo">
+                <ion-img class="imagem imagem13" src="/assets/RESERVATÓRIO DOSADOR Nº 3 (01).JPG"></ion-img>
+                <ion-img class="imagem imagem24" src="/assets/RESERVATÓRIO DOSADOR Nº 4 (01).JPG"></ion-img>
+            </div>
+            <div class="organizar">
+                <!-- <ion-input readonly="true" type="number" class="Enter-numero  Enter-numero1">{{Bomba3}}</ion-input> -->
+                <!-- <ion-input readonly="true" type="number" class="Enter-numero">{{Bomba4}}Ml/Kg</ion-input> -->
+                <div class="Enter-numero Enter-numero1">
+                    <div class="ajustedenumero">
+                        {{Bomba3}} Ml/Kg
+                    </div>
+                </div>
+                <div class="Enter-numero">
+                    <div class="ajustedenumero">
+                        {{Bomba4}} Ml/Kg
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <ion-list>
+        <ion-item>
+            <ion-label position="fixed">Receita</ion-label>
+            <ion-select placeHolder="Selecione" okText="Selecionar" cancelText="Cancelar" #C (ionChange)="onChange(C.value)" slot="end">
+                <ion-select-option value="1">1</ion-select-option>
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+                <ion-select-option value="6">6</ion-select-option>
+                <ion-select-option value="7">7</ion-select-option>
+                <ion-select-option value="8">8</ion-select-option>
+                <ion-select-option value="9">9</ion-select-option>
+                <ion-select-option value="0">10</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <!-- <ion-item> -->
+            <ion-button class="button-green" expand="block" (click)="AtivaReceita()">Ativar Receita</ion-button>
+        <!-- </ion-item> -->
+        <ion-item>
+            <ion-label>Peso de Calibração:     {{Peso}} g</ion-label>
+            <ion-button class="button-green" expand="block" (click)="PesoCalibracao('A')">Alterar</ion-button>
+        </ion-item>
+        
+        <ion-item [hidden]="!CalibrarPeso">
+            <ion-label>Peso Medido: </ion-label>
+            <ion-input type="number" name="pesCalib" [(ngModel)]="pesCalib" placeholder="Peso em gramas"></ion-input>
+            <ion-button class="button-green" expand="block" (click)="PesoCalibracao('B', pesCalib)">Enter</ion-button>
+        </ion-item>
+    
+        <div>
+            <ion-list>
+
+            <ion-item>
+            <ion-img class="imagem eclusa" src="/assets/120 pro/eclusa.jpg"></ion-img>
+            <ion-list class="Prog">
+                <ion-item>
+                    <ion-label>Vazão Prog.: {{Vazao}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Kg/Min Real: {{KGREAL}}</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-item>
+
+        </ion-list>
+        </div>
+    </ion-list>
+
+    <ion-list>
+        
+        <ion-item>
+            <ion-list>
+                <ion-title>Pó Secante</ion-title>
+                <ion-item>
+                    <ion-img src="/assets/120 pro/posecante.jpg"></ion-img>
+                </ion-item>
+                <ion-item>
+                    <ion-button class="button-green" (click)="SomaPorcentagempo('-')"><ion-icon name="remove"></ion-icon></ion-button>
+                    <ion-button class="button-green" (click)="SomaPorcentagempo('+')"><ion-icon name="add"></ion-icon></ion-button>
+                </ion-item>
+            </ion-list>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Ligar pó</ion-label>
+                    <ion-toggle (ionChange)="LigaPo($event)"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Pré-set: </ion-label>
+                    <ion-label slot="end" class="monitor">{{PreSetPoSecante}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Atual: </ion-label>
+                    <ion-label slot="end" class="monitor">{{PorcentagemPo}}</ion-label>
+                </ion-item>
+            </ion-list> 
+        </ion-item>
+        <ion-item>
+            <ion-label>Ligar Exaustor</ion-label>
+            <ion-toggle (ionChange)="LigaExaustor($event)"></ion-toggle>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="footerall">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

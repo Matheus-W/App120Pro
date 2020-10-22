@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title  class="titles">Limpeza</ion-title>
+    <ion-buttons slot="end" class="ion-padding">
+        <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+        <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-refresher slot="fixed" (ionRefresh)="atualizarMensagem($event)">
+        <ion-refresher-content 
+          pullingIcon="arrow-dropdown" 
+          pullingText="Puxe para atualizar" 
+          refreshingSpinner="circles" 
+          refreshingText="Atualizando...">
+        </ion-refresher-content>
+    </ion-refresher>
+     <p class="paragrafo">{{message}}</p>  -->
+
+
+    
+    <ion-list>
+        <ion-item>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 1 (01).JPG" [hidden]="b1"></ion-img>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 1 (02).JPG" [hidden]="!b1"></ion-img>
+            <ion-list>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b11" class="button-green-local" expand="full" (click)="LimpezaDeBombas('1')">Esgotar</ion-button>
+                            <ion-button [hidden]="!b11" class="button-red" expand="full" (click)="LimpezaDeBombas('1')">Esgotar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b5" class="button-green-local" expand="full" (click)="LimpezaDeBombas('5')">Limpar</ion-button>
+                            <ion-button [hidden]="!b5" class="button-red" expand="full" (click)="LimpezaDeBombas('5')">Limpar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-list>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 2 (01).JPG" [hidden]="b2"></ion-img>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 2 (02).JPG" [hidden]="!b2"></ion-img>
+            <ion-list>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b22" class="button-green-local" expand="full" (click)="LimpezaDeBombas('2')">Esgotar</ion-button>
+                            <ion-button [hidden]="!b22" class="button-red" expand="full" (click)="LimpezaDeBombas('2')">Esgotar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b6" class="button-green-local" expand="full" (click)="LimpezaDeBombas('6')">Limpar</ion-button>
+                            <ion-button [hidden]="!b6" class="button-red" expand="full" (click)="LimpezaDeBombas('6')">Limpar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-list>
+        </ion-item>
+        <ion-item>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 3 (01).JPG" [hidden]="b3"></ion-img>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 3 (02).JPG" [hidden]="!b3"></ion-img>
+            <ion-list>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b33" class="button-green-local" expand="full" (click)="LimpezaDeBombas('3')">Esgotar</ion-button>
+                            <ion-button [hidden]="!b33" class="button-red" expand="full" (click)="LimpezaDeBombas('3')">Esgotar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b7" class="button-green-local" expand="full" (click)="LimpezaDeBombas('7')">Limpar</ion-button>
+                            <ion-button [hidden]="!b7" class="button-red" expand="full" (click)="LimpezaDeBombas('7')">Limpar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-list>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 4 (01).JPG" [hidden]="b4"></ion-img>
+            <ion-img class="imagem" src="/assets/RESERVATÓRIO DOSADOR Nº 4 (02).JPG" [hidden]="!b4"></ion-img>
+            <ion-list>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b44" class="button-green-local" expand="full" (click)="LimpezaDeBombas('4')">Esgotar</ion-button>
+                            <ion-button [hidden]="!b44" class="button-red" expand="full" (click)="LimpezaDeBombas('4')">Esgotar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button [hidden]="b8" class="button-green-local" expand="full" (click)="LimpezaDeBombas('8')">Limpar</ion-button>
+                            <ion-button [hidden]="!b8" class="button-red" expand="full" (click)="LimpezaDeBombas('8')">Limpar</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-list>
+        </ion-item>
+        
+    </ion-list>
+
+    <div class="ion-padding">
+        <ion-img src="/assets/120 pro/IMG_2933.JPG"></ion-img>
+    </div>
+
+
+</ion-content>
+
+<ion-footer class="footerall">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

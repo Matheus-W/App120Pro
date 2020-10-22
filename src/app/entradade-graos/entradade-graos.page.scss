@@ -1,0 +1,22 @@
+.monitor{
+    border: 2px solid grey;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.teste{
+    --pin-background: green;
+    --bar-background: rgb(168, 211, 168);
+    --knob-background: green;
+    --bar-background-active: green;
+}
+
+h3{
+    font-size: 17px;
+    padding-left: 5%;
+    font-family: sans-serif;
+}

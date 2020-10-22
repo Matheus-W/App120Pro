@@ -1,0 +1,102 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titles">Manutenção</ion-title>
+    <ion-buttons slot="end" class="ion-padding">
+        <ion-icon name="logo-rss" [hidden]="!conect"></ion-icon>
+        <ion-icon name="close-circle" [hidden]="conect"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <h4>Habilitar Túnel</h4>
+        <ion-item>
+            <ion-img class="imagem" src="/assets/120 pro/rosca.jpg"></ion-img>
+            <ion-toggle slot="end" (ionChange)="LigaTunel($event)"></ion-toggle>
+        </ion-item>
+        <h4>Habilitar Pó Secante</h4>
+        <ion-item>
+            <ion-img class="imagem" src="/assets/120 pro/posecante.jpg"></ion-img>
+            <ion-toggle slot="end" (ionChange)="LigaPo($event)"></ion-toggle>
+        </ion-item>
+    </ion-list>
+    
+    
+    <ion-list>
+        <h4>Tempo de mistura após término da semente</h4>
+        <ion-item>
+            <ion-label>Dados:</ion-label>
+            <div class="monitor">0</div>segundos
+        </ion-item>
+        <h4>Opções</h4>
+        <ion-item>
+            <ion-label>Entrada de grãos</ion-label>
+            <ion-button class="button-green" expand="full" (click)="abrirPagina('entradade-graos')">
+                <ion-icon name="arrow-forward"></ion-icon>
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-title>Bomba 1</ion-title>
+            <ion-list slot="end">
+                <ion-item>
+                    <ion-label>Agitador</ion-label>
+                    <ion-toggle (ionChange)="LigaAgitador($event, '®1')"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Bomba</ion-label>
+                    <ion-toggle (ionChange)="LigaBomba($event, '¹1')"></ion-toggle>
+                </ion-item>
+            </ion-list>
+        </ion-item>
+        <ion-item>
+            <ion-title>Bomba 2</ion-title>
+            <ion-list slot="end">
+                <ion-item>
+                    <ion-label>Agitador</ion-label>
+                    <ion-toggle (ionChange)="LigaAgitador($event, '®2')"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Bomba</ion-label>
+                    <ion-toggle (ionChange)="LigaBomba($event, '¹2')"></ion-toggle>
+                </ion-item>
+            </ion-list>
+        </ion-item>
+        <ion-item>
+            <ion-title>Bomba 3</ion-title>
+            <ion-list slot="end">
+                <ion-item>
+                    <ion-label>Agitador</ion-label>
+                    <ion-toggle (ionChange)="LigaAgitador($event, '®3')"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Bomba</ion-label>
+                    <ion-toggle (ionChange)="LigaBomba($event, '¹3')"></ion-toggle>
+                </ion-item>
+            </ion-list>
+        </ion-item>
+        <ion-item>
+            <ion-title>Bomba 4</ion-title>
+            <ion-list slot="end">
+                <ion-item>
+                    <ion-label>Agitador</ion-label>
+                    <ion-toggle (ionChange)="LigaAgitador($event, '®4')"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Bomba</ion-label>
+                    <ion-toggle (ionChange)="LigaBomba($event, '¹4')"></ion-toggle>
+                </ion-item>
+            </ion-list>
+        </ion-item>
+    
+    </ion-list>
+
+</ion-content>
+
+<ion-footer class="footerall">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>

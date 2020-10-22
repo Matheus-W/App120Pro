@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titles">Entrada de Grãos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Nível de grãos</ion-label>
+            <ion-button class="button-green" expand="full">
+                Desabilitar
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-label>Eclusa</ion-label>
+            <ion-button class="button-green" expand="full" (click)="LigaEclusa()">
+                {{Eclusa}}
+            </ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-label>Dispersor Centrífugo</ion-label>
+            <ion-button class="button-green" expand="full">
+                Ligar
+            </ion-button>
+        </ion-item>
+        <h3>Velocidade da Eclusa: </h3>
+        <ion-item>
+            <ion-button class="button-green" (click)="PegaValor('-')"><ion-icon name="remove"></ion-icon></ion-button>
+            <ion-button class="button-green" (click)="PegaValor('+')"><ion-icon name="add"></ion-icon></ion-button>
+            <div slot="end" class="monitor">{{velocidade}}</div>
+        </ion-item>
+    </ion-list>
+
+</ion-content>
+
+<ion-footer class="footerall">
+    © 2020 Grazmec Indústria e Comércio Ltda. All rights reserved.
+</ion-footer>
